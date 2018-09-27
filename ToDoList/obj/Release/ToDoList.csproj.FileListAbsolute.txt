@@ -1,0 +1,11 @@
+C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Release\ToDoList.csprojAssemblyReference.cache
+C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Release\MainWindow.baml
+C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Release\App.baml
+C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Release\ApplicationView.g.cs
+C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Release\CalendarView.g.cs
+C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Release\MainWindow.g.cs
+C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Release\App.g.cs
+C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Release\ToDoList_Content.g.cs
+C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Release\ToDoList_MarkupCompile.cache
+C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Release\ToDoList_MarkupCompile.lref
