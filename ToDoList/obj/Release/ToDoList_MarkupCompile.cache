@@ -10,11 +10,11 @@ none
 false
 TRACE
 C:\Users\Tommy\source\repos\ToDoList\ToDoList\App.xaml
-5890757512
+4-240822977
 2292765418
-20-1524543122
+211889776679
 201604875043
-AddTaskView.xaml;ApplicationView.xaml;CalendarView.xaml;HomeView.xaml;MainWindow.xaml;
+View\AddTaskView.xaml;View\ApplicationView.xaml;View\TaskListView.xaml;View\HomeView.xaml;
 
-True
+False
 

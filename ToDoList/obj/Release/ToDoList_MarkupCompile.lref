@@ -1,7 +1,7 @@
-﻿C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Release\GeneratedInternalTypeHelper.g.cs
+﻿
 
-FC:\Users\Tommy\source\repos\ToDoList\ToDoList\AddTaskView.xaml;;
-FC:\Users\Tommy\source\repos\ToDoList\ToDoList\ApplicationView.xaml;;
-FC:\Users\Tommy\source\repos\ToDoList\ToDoList\CalendarView.xaml;;
-FC:\Users\Tommy\source\repos\ToDoList\ToDoList\HomeView.xaml;;
+FC:\Users\Tommy\source\repos\ToDoList\ToDoList\View\AddTaskView.xaml;;
+FC:\Users\Tommy\source\repos\ToDoList\ToDoList\View\ApplicationView.xaml;;
+FC:\Users\Tommy\source\repos\ToDoList\ToDoList\View\TaskListView.xaml;;
+FC:\Users\Tommy\source\repos\ToDoList\ToDoList\View\HomeView.xaml;;
 

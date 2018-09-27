@@ -16,7 +16,7 @@ namespace ToDoList
     public partial class toDoListAppEntities : DbContext
     {
         public toDoListAppEntities()
-            : base("toDoListAppEntities")
+            : base("name=toDoListAppEntities")
         {
         }
     

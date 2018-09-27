@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3974208bace64aaa95c869351bd747e4" Name="Diagram1">
-        <EntityTypeShape EntityType="toDoListModel.Task" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="7a8702e618594e30b35cedd006fd7986" Name="Diagram1">
+        <EntityTypeShape EntityType="toDoListAppModel.Task" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

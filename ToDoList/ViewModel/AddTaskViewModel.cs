@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Input;
+using ToDoList.Model;
 
 namespace ToDoList
 {
@@ -13,12 +11,15 @@ namespace ToDoList
         private ICommand _saveTaskCommand;
         private Task _currentTask;
 
-        private int _TaskId;
-        private string _AuthorName;
         private string _Description;
-        private DateTime _DueDate;
-        private DateTime _CreatedDate;
-        private int _Priority;
+        private DateTime? _DueDate;
+        private ComboBoxItem _Priority;
+        private Business businessLogic;
+
+        public AddTaskViewModel()
+        {
+            businessLogic = new Business();
+        }
 
         public string Name
         {
@@ -28,30 +29,6 @@ namespace ToDoList
             }
         }
 
-        public int TaskId
-        {
-            get { return _TaskId; }
-            set
-            {
-                if (value != _TaskId)
-                {
-                    _TaskId = value;
-                    OnPropertyChanged("Id");
-                }
-            }
-        }
-        public string AuthorName
-        {
-            get { return _AuthorName; }
-            set
-            {
-                if (value != _AuthorName)
-                {
-                    _AuthorName = value;
-                    OnPropertyChanged("AuthorName");
-                }
-            }
-        }
         public string Description
         {
             get { return _Description; }
@@ -64,7 +41,7 @@ namespace ToDoList
                 }
             }
         }
-        public DateTime DueDate
+        public DateTime? DueDate
         {
             get { return _DueDate; }
             set
@@ -76,19 +53,7 @@ namespace ToDoList
                 }
             }
         }
-        public DateTime CreatedDate
-        {
-            get { return _CreatedDate; }
-            set
-            {
-                if (value != _CreatedDate)
-                {
-                    _CreatedDate = value;
-                    OnPropertyChanged("CreatedDate");
-                }
-            }
-        }
-        public int Priority
+        public ComboBoxItem Priority
         {
             get { return _Priority; }
             set
@@ -114,7 +79,7 @@ namespace ToDoList
             }
         }
 
-        public ICommand ChujWDupe
+        public ICommand AddTaskCommand
         {
             get
             {
@@ -122,7 +87,7 @@ namespace ToDoList
                 {
                     _saveTaskCommand = new RelayCommand(
                         param => SaveTask(),
-                        param => (CurrentTask != null)
+                        param => CanExecuteAddTaskCommand()
                     );
                 }
                 return _saveTaskCommand;
@@ -130,19 +95,23 @@ namespace ToDoList
 
         }
 
+        private bool CanExecuteAddTaskCommand()
+        {
+            return true;
+        }
+
 
         private void SaveTask()
         {
-            toDoListAppEntities context = new toDoListAppEntities();
-            context.Task.Add(new Task()
+            Task task = new Task()
             {
                 AuthorName = WindowsIdentity.GetCurrent().Name,
                 Description = _Description,
                 CreatedDate = DateTime.Now,
                 DueDate = _DueDate,
-                Priority = _Priority,
-            });
-            context.SaveChanges();
+                Priority = _Priority.Content.ToString(),
+            };
+            businessLogic.Add(task);
         }
     }
 }

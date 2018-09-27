@@ -9,26 +9,18 @@ namespace ToDoList
 {
     public class ApplicationViewModel : ObservableObject
     {
-        #region Fields
-
         private ICommand _changePageCommand;
 
         private IPageViewModel _currentPageViewModel;
         private List<IPageViewModel> _pageViewModels;
 
-        #endregion
-
         public ApplicationViewModel()
         {
-            // Add available pages
             PageViewModels.Add(new HomeViewModel());
-            PageViewModels.Add(new CalendarViewModel());
+            PageViewModels.Add(new TaskListViewModel());
             PageViewModels.Add(new AddTaskViewModel());
-            // Set starting page
             CurrentPageViewModel = PageViewModels[0];
         }
-
-        #region Properties / Commands
 
         public ICommand ChangePageCommand
         {
@@ -72,10 +64,6 @@ namespace ToDoList
             }
         }
 
-        #endregion
-
-        #region Methods
-
         private void ChangeViewModel(IPageViewModel viewModel)
         {
             if (!PageViewModels.Contains(viewModel))
@@ -84,7 +72,5 @@ namespace ToDoList
             CurrentPageViewModel = PageViewModels
                 .FirstOrDefault(vm => vm == viewModel);
         }
-
-        #endregion
     }
 }

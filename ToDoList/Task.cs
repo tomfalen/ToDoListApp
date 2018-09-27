@@ -19,6 +19,6 @@ namespace ToDoList
         public string Description { get; set; }
         public Nullable<System.DateTime> DueDate { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
-        public Nullable<int> Priority { get; set; }
+        public string Priority { get; set; }
     }
 }

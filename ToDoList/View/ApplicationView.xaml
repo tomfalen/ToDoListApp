@@ -8,8 +8,8 @@
         <DataTemplate DataType="{x:Type local:HomeViewModel}">
             <local:HomeView />
         </DataTemplate>
-        <DataTemplate DataType="{x:Type local:CalendarViewModel}">
-            <local:CalendarView />
+        <DataTemplate DataType="{x:Type local:TaskListViewModel}">
+            <local:TaskListView />
         </DataTemplate>
         <DataTemplate DataType="{x:Type local:AddTaskViewModel}">
             <local:AddTaskView />

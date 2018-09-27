@@ -18,12 +18,11 @@ C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Debug\ToDoList.Properties.Reso
 C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Debug\ToDoList.csproj.GenerateResource.cache
 C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Debug\ToDoList.csproj.CoreCompileInputs.cache
 C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Debug\ToDoList.csproj.CopyComplete
-C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Debug\ToDoList.csprojAssemblyReference.cache
 C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Debug\View\AddTaskView.g.cs
 C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Debug\View\ApplicationView.g.cs
-C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Debug\View\CalendarView.g.cs
 C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Debug\View\HomeView.g.cs
 C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Debug\View\AddTaskView.baml
 C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Debug\View\ApplicationView.baml
-C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Debug\View\CalendarView.baml
 C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Debug\View\HomeView.baml
+C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Debug\View\TaskListView.g.cs
+C:\Users\Tommy\source\repos\ToDoList\ToDoList\obj\Debug\View\TaskListView.baml

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ToDoList.Model
 {
@@ -19,35 +16,26 @@ namespace ToDoList.Model
             return _context.Task.ToList();
         }
 
-        public void Delete(Task task)
+        public void Delete(TaskModel task)
         {
-            _context.Task.Remove(task);
+            Task taskDelete = _context.Task.Where(x => x.Id == task.Id).FirstOrDefault();
+            _context.Task.Remove(taskDelete);
+            _context.SaveChanges();
         }
 
-        public void Update(Task task)
+        public void Add(Task task)
         {
-
+            _context.Task.Add(task);
+            _context.SaveChanges();
         }
 
-        private void CheckValidations(Task task)
+        public void Update(TaskModel task)
         {
-            if (task == null)
-            {
-                throw new ArgumentNullException("Person", "Please select record from Grid or Add New");
-            }
-
-            if (string.IsNullOrEmpty(task.Description))
-            {
-                throw new ArgumentNullException("Description", "Please enter Description");
-            }
-            else if (task.DueDate.HasValue)
-            {
-                throw new ArgumentNullException("Due Date", "Please enter due date");
-            }
-            else if ((int)task.Priority == -1)
-            {
-                throw new ArgumentNullException("Profession", "Please enter Profession");
-            }
+            Task taskUpdate = _context.Task.Where(x => x.Id == task.Id).FirstOrDefault();
+            taskUpdate.Description = task.Description;
+            taskUpdate.DueDate = task.DueDate;
+            taskUpdate.Priority = task.Priority.Content.ToString();
+            _context.SaveChanges();
         }
     }
 }

@@ -73,27 +73,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Enums\Enums.cs" />
     <Compile Include="Model\Business.cs" />
-    <Compile Include="View\AddTaskView.xaml.cs">
-      <DependentUpon>AddTaskView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ViewModel\AddTaskViewModel.cs" />
-    <Compile Include="View\ApplicationView.xaml.cs">
-      <DependentUpon>ApplicationView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ViewModel\ApplicationViewModel.cs" />
-    <Compile Include="View\CalendarView.xaml.cs">
-      <DependentUpon>CalendarView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ViewModel\CalendarViewModel.cs" />
-    <Compile Include="View\HomeView.xaml.cs">
-      <DependentUpon>HomeView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ViewModel\HomeViewModel.cs" />
-    <Compile Include="IPageViewModel.cs" />
-    <Compile Include="Helper Classes\ObservableObject.cs" />
-    <Compile Include="Helper Classes\RelayCommand.cs" />
+    <Compile Include="Model\TaskModel.cs" />
     <Compile Include="Task.cs">
       <DependentUpon>ToDoList.tt</DependentUpon>
     </Compile>
@@ -112,6 +93,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ToDoList.edmx</DependentUpon>
     </Compile>
+    <Compile Include="View\AddTaskView.xaml.cs">
+      <DependentUpon>AddTaskView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\AddTaskViewModel.cs" />
+    <Compile Include="View\ApplicationView.xaml.cs">
+      <DependentUpon>ApplicationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\ApplicationViewModel.cs" />
+    <Compile Include="View\TaskListView.xaml.cs">
+      <DependentUpon>TaskListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\TaskListViewModel.cs" />
+    <Compile Include="View\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\HomeViewModel.cs" />
+    <Compile Include="IPageViewModel.cs" />
+    <Compile Include="Helper Classes\ObservableObject.cs" />
+    <Compile Include="Helper Classes\RelayCommand.cs" />
     <Page Include="View\AddTaskView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -120,7 +120,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\CalendarView.xaml">
+    <Page Include="View\TaskListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -174,15 +174,8 @@
     <Resource Include="img\homeBackground.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="img\calendarImg.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="img\plusIcon.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="img\taskListIcon.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="ToDoList.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ToDoList.edmx</DependentUpon>
@@ -194,6 +187,5 @@
       <LastGenOutput>ToDoList.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

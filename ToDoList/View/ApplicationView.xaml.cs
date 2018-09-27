@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace ToDoList
 {
-    /// <summary>
-    /// Interaction logic for ApplicationView.xaml
-    /// </summary>
     public partial class ApplicationView : Window
     {
         public ApplicationView()
